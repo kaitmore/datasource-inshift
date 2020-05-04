@@ -1,10 +1,12 @@
 # datasource-inshift
 
-This repository contains datasets for deployment to covidapihub.io.
+This repository contains INSHIFT datasets for deployment to covidapihub.io.
 
 ## Adding a dataset
 
-To add a dataset, run `make dataset`. An example dataset with metadata has been added to `data/example-nytimes`. This command will:
+To add a dataset, run `make dataset`. An example dataset with metadata has been added to `data/example-nytimes`.
+
+This command will:
 
 1. Ask for metadata related to the new dataset
 2. Create a new directory under the top-level `/data` directory based on the given api slug
