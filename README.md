@@ -1,10 +1,12 @@
 # datasource-inshift
 
-This repository contains datasets for deployment to covidapihub.io.
+This repository contains INSHIFT datasets for deployment to covidapihub.io.
 
 ## Adding a dataset
 
-To add a dataset, run `make dataset`. An example dataset with metadata has been added to `data/example-nytimes`. This command will:
+To add a dataset, run `make dataset`, enter in metadata, and then add the new spreadsheet to the resulting directory. An example dataset with metadata has been added to `data/example-nytimes`.
+
+The `make dataset` command will:
 
 1. Ask for metadata related to the new dataset
 2. Create a new directory under the top-level `/data` directory based on the given api slug
@@ -13,9 +15,9 @@ To add a dataset, run `make dataset`. An example dataset with metadata has been 
 Here is a description of the metadata we need:
 
 - API Slug: a "kebab-case", all lowercase, no spaces or special characters name for the deployment. This will be used as the folder name and once deployed, it will dictate the route to this api - e.g. `https://covidapihub.io/apis/<api-slug>`
-- Filename: name of the file you are adding, with extension - e.g. `states-current.csv`
-- Display Name: a prettier, human readable name for the api. This will be used as the API name on the cards in the UI.
-- Data source: original owner of the data
+- Filename: Name of the file you are adding, with extension - e.g. `states-current.csv`
+- Display Name: A prettier, human readable name for the api. This will be used as the API name on the cards in the UI.
+- Data source: Original owner of the data
 - Data source URL: Relevant link back to the source. This could be the owner's homepage or documentation for the specific dataset if available.
 - Capability: category of the dataset being added
 - Description: Description of the API used in dashboard service view
